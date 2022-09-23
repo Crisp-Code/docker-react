@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  web-app:
+    build:
+      context: ~/myProjects/frontend
+      dockerfile: Dockerfile.dev
+    image: web-app
+    ports: 
+      - "3000:3000"
+    restart: "no"
+    stdin_open: true
+    tty: true
+    volumes:
+      - /home/node/app/node_modules
+      - ~/myProjects/frontend:/home/node/app
+  app-tests:
+    image: app-tests
+    build:
+      context: ~/myProjects/frontend
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /home/node/app/node_modules
+      - ~/myProjects/frontend:/home/node/app
+    restart: "no"
+    stdin_open: true
+    tty: true
+    command: ["npm", "run", "test"]
+
