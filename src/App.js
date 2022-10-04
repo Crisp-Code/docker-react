@@ -21,6 +21,13 @@ function App() {
       </header>
     </div>
   );
+  <div>
+    <header className='App-body'>
+      <p>
+        Adding Some Text To Body
+      </p>
+    </header>
+  </div>
 }
 
 export default App;
