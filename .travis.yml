@@ -9,3 +9,15 @@ before_install:
 
 script:
   - docker run -e CI=true shreyp08/docker-react npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-west-2
+  app: "docker-react"
+  env: "Dockerreact-env"
+  bucket_name: "elasticbeanstalk-us-west-2-627919072036"
+  bucket_path: "docker-react" #default_path == app name
+  on:
+    branch: master #Only auto-deploy if code is pushed to master
+  access_key_id: $AccessKeyID
+  secret_access_key: "$SecretAccessKey"
