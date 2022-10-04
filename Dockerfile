@@ -20,4 +20,6 @@ RUN npm run build
 # 'FROM' marks the end of the above block
 FROM nginx
 
+#Exposing port
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
