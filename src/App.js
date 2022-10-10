@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <><div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -20,14 +20,14 @@ function App() {
         </a>
       </header>
     </div>
+    <div className='AppBody'>
+     <header className='App-body'>
+        <p>
+          Adding Some Text To Body
+        </p>
+      </header>
+    </div></>
   );
-  <div>
-    <header className='App-body'>
-      <p>
-        Adding Some Text To Body
-      </p>
-    </header>
-  </div>
 }
 
 export default App;
