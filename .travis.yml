@@ -12,10 +12,10 @@ script:
 
 deploy:
   provider: elasticbeanstalk
-  region: us-west-2
+  region: ap-south-1
   app: "docker-react"
   env: "Dockerreact-env"
-  bucket_name: "elasticbeanstalk-us-west-2-627919072036"
+  bucket_name: "elasticbeanstalk-ap-south-1-627919072036"
   bucket_path: "docker-react" #default_path == app name
   on:
     branch: master #Only auto-deploy if code is pushed to master
